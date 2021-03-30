@@ -1,0 +1,54 @@
+:root{
+    --speed:50;
+}
+.machine{
+    background-color: peru;
+    height: 300px;
+    width: 800px;
+    margin: 40px;
+    border: dashed brown 3px;
+    display: flex;
+    z-index: 5;
+    justify-content: space-around;
+}
+.slot{
+    width: 220px;
+    background-color: burlywood;
+    margin: 20px;
+    z-index: 1;
+    overflow: hidden;
+}
+.slot > .value{
+    font-size: 80pt;
+    text-align: center;
+    line-height: 250px;
+    z-index: 3;
+}
+.value.animate{
+    animation-name: spin;
+    animation-iteration-count: infinite;
+    animation-duration: calc(1s/var(--speed));
+}
+.input{
+    font-size: 30pt;
+    margin: 40px;
+}
+.button{
+    background-color:peru;
+    color: cornsilk;
+    margin: 40px;
+    margin-left: 400px;
+    font-size: 20pt;
+    padding: 10px;
+    margin-top: 20px;
+    display: block;
+}
+@keyframes spin{
+    0%{
+        line-height: 30px;
+        
+    }
+    100%{
+        line-height: 450px;
+    }
+}
